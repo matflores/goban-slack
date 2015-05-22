@@ -7,6 +7,10 @@
     "SLACK_URL": {
       "description": "Incoming WebHook URL",
       "value": "https://hooks.slack.com/services/<token>/<token>"
+    },
+    "SLACK_TOKEN": {
+      "description": "Slash Command Verification Token",
+      "value": "<token>"
     }
   }
 }

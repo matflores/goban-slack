@@ -5,7 +5,14 @@ require_relative "lib/goban"
 require_relative "lib/slack"
 
 Cuba.define do
+  def forbidden!
+    res.status = 403
+    halt res.finish
+  end
+
   on post, "boards" do
+    forbidden! unless req.params["token"] == ENV.fetch("SLACK_TOKEN")
+
     puts req.params.inspect
 
     board_url = Goban.create
