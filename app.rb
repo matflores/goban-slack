@@ -21,7 +21,7 @@ Cuba.define do
       channel:    "#test-integrations",
       username:   "Goban",
       icon_emoji: ":black_circle:",
-      text:       board_url
+      text:       "#{req.params["user_name"]} started a new game: <#{board_url}>"
     }
 
     Slack.post(payload)
