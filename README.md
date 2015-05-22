@@ -14,6 +14,8 @@ GobanSlack is a Slack integration for [Goban](http://goban.co/), a web app that 
 * URL: should point to the `/boards` endpoint on the URL of your deployed Heroku app.
 * Method: leave it as "POST".
 
+Copy the `Token` value and use it as the value of the `SLACK_TOKEN` variable on your Heroku app's environment.
+
 3. Finally, add the Incoming WebHooks integration on your Slack team. This is needed so that GobanSlack can post messages to your Slack team's channels.
 
 Copy the `WebHook URL` value and use it as the value of the `SLACK_URL` variable on your Heroku app's environment.
