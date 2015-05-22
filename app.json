@@ -1,0 +1,12 @@
+{
+  "name": "GobanSlack Integration",
+  "description": "This integration allows you to create a new Go board on http://goban.co from Slack using the /goban command.",
+  "repository": "https://github.com/matflores/goban-slack",
+  "keywords": ["ruby", "go", "goban", "slack"],
+  "env": {
+    "SLACK_URL": {
+      "description": "Incoming WebHook URL",
+      "value": "https://hooks.slack.com/services/<token>/<token>"
+    }
+  }
+}
