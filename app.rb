@@ -18,7 +18,7 @@ Cuba.define do
     board_url = Goban.create
 
     payload = {
-      channel:    "#test-integrations",
+      channel:    req.params["channel_id"],
       username:   "Goban",
       icon_emoji: ":black_circle:",
       text:       "#{req.params["user_name"]} started a new game: <#{board_url}>"
