@@ -13,8 +13,6 @@ Cuba.define do
   on post, "boards" do
     forbidden! unless req.params["token"] == ENV.fetch("SLACK_TOKEN")
 
-    puts req.params.inspect
-
     board_url = Goban.create
 
     payload = {
