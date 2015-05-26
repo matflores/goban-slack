@@ -4,6 +4,8 @@ require "rack/protection"
 require_relative "lib/goban"
 require_relative "lib/slack"
 
+DEFAULT_BOARD_SIZE = 19
+
 Cuba.define do
   def forbidden!
     res.status = 403
@@ -13,7 +15,10 @@ Cuba.define do
   on post, "boards" do
     forbidden! unless req.params["token"] == ENV.fetch("SLACK_TOKEN")
 
-    board_url = Goban.create
+    board_size = req.params["text"].to_i
+    board_size = DEFAULT_BOARD_SIZE if board_size == 0
+
+    board_url = Goban.create(board_size)
 
     payload = {
       channel:    req.params["channel_id"],
