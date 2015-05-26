@@ -26,6 +26,8 @@ That's it!
 
 Write `/goban` in any Slack channel and GobanSlack will create an empty Go board at [Goban](http://goban.co) and will post the link to the new board in the same channel so that anyone on that channel can see the board and/or play.
 
+Optionally, you can pass the board size as the first argument of the `/goban` command, as in `/goban 9` or `/goban 13`. If the board size is not specified, a standard 19x19 board will be created.
+
 ## Credits
 
 [Goban](http://goban.co) was created and is maintained by [Lucas Nasif](http://lucasnasif.com).
